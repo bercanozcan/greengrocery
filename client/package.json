@@ -1,0 +1,17 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "dev": "nodemon client.js"
+  },
+  "author": "Bercan Özcan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.0",
+    "got": "^10.7.0",
+    "hbs": "^4.1.0"
+  }
+}

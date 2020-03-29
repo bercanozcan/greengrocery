@@ -1,0 +1,44 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+    (()=>{
+
+        $('body').on('click', '.add-cart button', (event)=> {
+            $('.qty').css({'z-index':'-1'});
+            $(event.target).closest('.card').find('.qty').css({'z-index':'1'});
+
+            var a = parseInt($(event.target).closest('.card').find('.qty-input').val());
+            a++;
+            $(event.target).closest('.card').find('.qty-input').val(a);
+        });
+
+        $('body').on('click', 'button.qty-close', (event)=> {
+            $(event.target).closest('.card').find('.qty').css({'z-index':'-1'});
+        });
+
+
+        $('body').on('click', '.increase', (event)=> {
+            var a = parseInt($(event.target).closest('.card').find('.qty-input').val());
+            a++;
+            if(a >= 0 && a <= 99){
+                $(event.target).closest('.card').find('.qty-input').val(a);
+            }else{
+                $(event.target).closest('.card').find('.qty-input').val(1);
+            }
+
+        });
+
+        $('body').on('click', '.decrease', (event)=> {
+            var a = parseInt($(event.target).closest('.card').find('.qty-input').val());
+            a--;
+            if(a >= 0 && a <= 99){
+                $(event.target).closest('.card').find('.qty-input').val(a);
+            }
+        });
+
+    })();
+
+</script>
+</body>
+
+</html>
