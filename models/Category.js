@@ -15,4 +15,5 @@ const ProductSchema = mongoose.Schema({
     }
 });
 
+
 module.exports = mongoose.model('Categories', ProductSchema);
